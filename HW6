@@ -1,0 +1,11 @@
+def hanoi(n , Aspace, Bspace, Cspace):
+    if n == 1:
+        print('move ring 1 from', Aspace, 'to', Bspace)
+        return
+    hanoi(n-1, Aspace, Cspace, Bspace)
+    print('move ring',n,'from',Aspace,'to',Bspace)
+    hanoi(n-1 , Cspace , Bspace , Aspace)
+    
+num = int(input('Enter number for rings: ')) 
+hanoi(num, 'A', 'C', 'B')
+    
